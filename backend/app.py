@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, request, jsonify
 from youtube_chat import get_live_chat_messages, get_live_chat_id, predict_toxicity
 
 app = Flask(__name__)

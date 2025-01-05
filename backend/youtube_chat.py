@@ -13,8 +13,9 @@ API_KEY = os.getenv('YOUTUBE_API_KEY')
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 # Muat model dan vectorizer
-model = joblib.load('model/toxicity_model.pkl')
-vectorizer = joblib.load('model/tfidf_vectorizer.pkl')
+model = os.path.join(os.path.dirname(__file__), 'model/toxicity_model.pkl')
+vectorizer = os.path.join(os.path.dirname(
+    __file__), 'model/tfidf_vectorizer.pkl')
 
 
 # Fungsi untuk mendapatkan live chat ID
